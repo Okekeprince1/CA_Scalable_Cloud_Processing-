@@ -1,0 +1,19 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowEMRRead",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::062679125826:role/EMR_EC2_DefaultRole"
+      },
+      "Action": [
+        "kinesis:DescribeStream",
+        "kinesis:GetShardIterator",
+        "kinesis:GetRecords",
+        "kinesis:ListShards"
+      ],
+      "Resource": "arn:aws:kinesis:us-east-1:062679125826:stream/CA-Scalable-Kinesis-Stream"
+    }
+  ]
+}
